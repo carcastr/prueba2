@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jun 08 15:52:52 COT 2020
+reactor-logback-3.2.3.RELEASE.jar>central=
+reactor-logback-3.2.3.RELEASE.pom>central=
+reactor-logback-3.2.3.RELEASE-sources.jar>central=

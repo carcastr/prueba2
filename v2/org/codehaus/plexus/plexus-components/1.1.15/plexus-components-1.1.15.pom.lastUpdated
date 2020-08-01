@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:56:15 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912174920
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912175096
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.codehaus.plexus\:plexus-components\:pom\:1.1.15 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/codehaus/plexus/plexus-components/1.1.15/plexus-components-1.1.15.pom. Error code 409, 

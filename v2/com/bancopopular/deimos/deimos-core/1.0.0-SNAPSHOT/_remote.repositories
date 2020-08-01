@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Feb 07 09:49:41 COT 2020
+deimos-core-1.0.0-SNAPSHOT.pom>=
+deimos-core-1.0.0-SNAPSHOT.jar>snapshots=
+deimos-core-1.0.0-SNAPSHOT-sources.jar>=
+deimos-core-1.0.0-SNAPSHOT-sources.jar>snapshots=
+deimos-core-1.0.0-SNAPSHOT.pom>snapshots=
+deimos-core-1.0.0-SNAPSHOT.jar>=

@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:52:29 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595911949429
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595911949726
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.apache.maven.plugins\:maven-plugins\:pom\:22 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom. Error code 409, 

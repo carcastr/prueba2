@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:56:13 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912172921
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912173185
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.apache.maven.shared\:maven-filtering\:pom\:1.1 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.pom. Error code 409, 

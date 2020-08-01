@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.bancopopular.deimos</groupId>
+		<artifactId>deimos-core-starters</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../</relativePath>
+	</parent>
+
+	<artifactId>deimos-core-starter-publisher-subscriber</artifactId>
+
+	<name>deimos-core-starter-publisher-subscriber</name>
+	<description>deimos-core-starter-publisher-subscriber</description>
+
+	<inceptionYear>2019</inceptionYear>
+
+	<organization>
+		<name>Everis</name>
+		<url>https://www.terpel.com/</url>
+	</organization>
+
+	
+	<developers>
+		<developer>
+			<id>asarmiet</id>
+			<name>Andres Sarmiento Tobon</name>
+			<email>asarmiet@everis.com</email>
+			<organization>Everis Colombia</organization>
+			<organizationUrl>http://www.everis.com/</organizationUrl>
+			<timezone>America/Bogota</timezone>
+			<roles>
+				<role>Arquitecto de Microservicios</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.bancopopular.deimos</groupId>
+			<artifactId>deimos-core</artifactId>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.everis.deimos</groupId> -->
+<!-- 			<artifactId>deimos-core-starter-logstash-logback</artifactId> -->
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- Publication/Subscriber -->
+		<dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-core</artifactId>
+       </dependency>
+	   <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-gcp-starter-pubsub</artifactId>
+	   </dependency>
+	</dependencies>
+</project>

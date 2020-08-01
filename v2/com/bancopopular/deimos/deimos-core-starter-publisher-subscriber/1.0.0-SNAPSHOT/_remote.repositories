@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Feb 07 09:50:30 COT 2020
+deimos-core-starter-publisher-subscriber-1.0.0-SNAPSHOT.jar>=
+deimos-core-starter-publisher-subscriber-1.0.0-SNAPSHOT-sources.jar>=
+deimos-core-starter-publisher-subscriber-1.0.0-SNAPSHOT.pom>=

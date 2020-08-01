@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:58:36 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912309317
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912316816
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.apache.maven.reporting\:maven-reporting-api\:jar\:2.0.9 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.jar. Error code 409, 

@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bancopopular.deimos</groupId>
+	<artifactId>deimos-framework</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>deimos-core-dependencies</module>
+		<module>deimos-core-parent</module>
+		<module>deimos-core</module>
+		<module>deimos-core-starters</module>
+		<module>deimos-services-parent</module>
+		<module>deimos-core-http-client</module>
+		<module>deimos-core-support-client</module>
+	</modules>
+
+	<name>deimos-framework</name>
+	<description>Proyecto multimodulo de arquitectura que agrupa los proyectos deimos-core*.
+  </description>
+
+	<inceptionYear>2019</inceptionYear>
+
+	<organization>
+		<name>Everis</name>
+		<url>https://www.terpel.com/</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>oalvaro</id>
+			<name>Oscar Alvaro Aguilar</name>
+			<email>oalvaroa@everis.com</email>
+			<organization>Everis Peru</organization>
+			<organizationUrl>http://www.everis.com/</organizationUrl>
+			<timezone>America/Lima</timezone>
+			<roles>
+				<role>Arquitecto de Microservicios</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<!-- <distributionManagement> <repository> <id>deimos-releases</id> <name>everis-artifactory-releases</name> 
+		<url>http://artifactory.everis.com:8081/artifactory/DEIMOS.Release</url> 
+		</repository> <snapshotRepository> <id>deimos-snapshots</id> <name>everis-artifactory-snapshots</name> 
+		<url>http://artifactory.everis.com:8081/artifactory/DEIMOS.Snapshot</url> 
+		</snapshotRepository> </distributionManagement> -->
+
+	<!--<repositories> <repository> <id>deimos-snapshots</id> <name>everis-artifactory</name> 
+		<releases> <enabled>false</enabled> </releases> <snapshots> <enabled>true</enabled> 
+		</snapshots> <url>http://artifactory.everis.com:8081/artifactory/DEIMOS.Release</url> 
+		</repository> </repositories> -->
+
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>libs-release</name>
+			<url>https://oss.jfrog.org/artifactory/libs-release</url>
+		</repository>
+		<repository>
+			<snapshots />
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>https://oss.jfrog.org/artifactory/libs-snapshot</url>
+		</repository>
+	</repositories>
+
+	<!--<pluginRepositories> <pluginRepository> <id>deimos-plugins</id> <name>Plugin 
+		repository</name> <url>http://artifactory.everis.com:8081/artifactory/DEIMOS.Public</url> 
+		</pluginRepository> </pluginRepositories> -->
+
+	<issueManagement>
+		<system>Jira</system>
+	</issueManagement>
+
+	<properties>
+		<spring-boot-maven-plugin.version>2.1.5.RELEASE</spring-boot-maven-plugin.version>
+    	<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+		<spring-boot-configuration-processor.version>2.1.5.RELEASE</spring-boot-configuration-processor.version>
+    	<artifactory-maven-plugin.version>2.6.1</artifactory-maven-plugin.version>
+	</properties>
+
+</project>

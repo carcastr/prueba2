@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:55:19 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912119675
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912119867
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.apache.maven.doxia\:doxia-sink-api\:pom\:1.0-alpha-7 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.pom. Error code 409, 

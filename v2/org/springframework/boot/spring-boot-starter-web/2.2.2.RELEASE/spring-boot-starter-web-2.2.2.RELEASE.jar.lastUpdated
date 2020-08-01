@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jul 28 09:08:20 COT 2020
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1595945300317
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.springframework.boot\:spring-boot-starter-web\:jar\:2.2.2.RELEASE from/to central (https\://repo.maven.apache.org/maven2)\: C\:\\Users\\carcastr\\.m2\\repository5\\org\\springframework\\boot\\spring-boot-starter-web\\2.2.2.RELEASE\\spring-boot-starter-web-2.2.2.RELEASE.jar (El proceso no tiene acceso al archivo porque est\u00E1 siendo utilizado por otro proceso)

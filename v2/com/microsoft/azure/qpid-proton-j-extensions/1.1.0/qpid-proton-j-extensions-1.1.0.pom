@@ -1,0 +1,36 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>qpid-proton-j-extensions</artifactId>
+    <version>1.1.0</version>
+    <packaging>jar</packaging>
+    <name>qpid-proton-j-extensions</name>
+    <description>
+        Extension for qpid-proton-j library to talk AMQP over WEBSOCKETS.
+    </description>
+    <url>https://github.com/Azure/qpid-proton-j-extensions</url>
+    <licenses>
+        <license>
+            <name>MIT license</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>SREERAM GARLAPATI</name>
+            <organization>Microsoft</organization>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git@github.com:Azure/qpid-proton-j-extensions.git</connection>
+        <developerConnection>scm:git:git@github.com:Azure/qpid-proton-j-extensions.git</developerConnection>
+        <url>git@github.com:Azure/qpid-proton-j-extensions.git</url>
+    </scm>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.qpid</groupId>
+            <artifactId>proton-j</artifactId>
+            <version>[0.26.0,)</version>
+        </dependency>
+    </dependencies>
+</project>

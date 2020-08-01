@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jun 08 15:52:05 COT 2020
+reactor-netty-0.8.8.RELEASE-sources.jar>central=
+reactor-netty-0.8.8.RELEASE.jar>central=
+reactor-netty-0.8.8.RELEASE.pom>central=

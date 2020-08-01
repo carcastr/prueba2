@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.bancopopular.deimos</groupId>
+		<artifactId>deimos-core-starters</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../deimos-core-starters</relativePath>
+	</parent>
+
+	<artifactId>deimos-core-support-client</artifactId>
+
+	<name>deimos-core-support-client</name>
+	<description>deimos-core-support-client</description>
+
+	<inceptionYear>2019</inceptionYear>
+
+	<organization>
+		<name>Everis</name>
+		<url>https://www.terpel.com/</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>oalvaro</id>
+			<name>Oscar Alvaro Aguilar</name>
+			<email>oalvaroa@everis.com</email>
+			<organization>Everis Peru</organization>
+			<organizationUrl>http://www.everis.com/</organizationUrl>
+			<timezone>America/Lima</timezone>
+			<roles>
+				<role>Arquitecto de Microservicios</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.bancopopular.deimos</groupId>
+			<artifactId>deimos-core-http-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+</project>

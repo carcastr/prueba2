@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.bancopopular.services</groupId>
+    <artifactId>deimos-services-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>com.bancopopular.deimos.services.support</groupId>
+  <artifactId>deimos-support-services-config-server</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
+    <java.version>1.8</java.version>
+    <deimos-core-dependencies.version>2.3.0</deimos-core-dependencies.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <deimos.service.name>config-server</deimos.service.name>
+    <start-class>com.bancopopular.deimos.services.support.configserver.DeimosConfigServerApplication
+    </start-class>
+  </properties>
+
+  <inceptionYear>2019</inceptionYear>
+
+  <organization>
+    <name>everis</name>
+    <url>http://www.terpel.com</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>jdelarof</id>
+      <name>Jose de la rosa</name>
+      <email>jdelarof@everis.com</email>
+      <organization>Everis Peru SAC</organization>
+      <organizationUrl>http:/www.everis.com/</organizationUrl>
+      <timezone>America/Lima</timezone>
+      <roles>
+        <role>Software Architect</role>
+      </roles>
+    </developer>
+    <developer>
+      <id>oalvaro</id>
+      <name>Oscar Alvaro Aguilar</name>
+      <email>oalvaroa@everis.com</email>
+      <organization>Everis Peru SAC</organization>
+      <organizationUrl>http:/www.everis.com/</organizationUrl>
+      <timezone>America/Lima</timezone>
+      <roles>
+        <role>Software Architect</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <!-- Must contain Deimos infrastructure-dependencies as import -->
+<!--   <dependencyManagement> -->
+<!--     <dependencies> -->
+<!--       <dependency> -->
+<!--         <groupId>com.everis.deimos</groupId> -->
+<!--         <artifactId>deimos-core-dependencies</artifactId> -->
+<!--         <version>${deimos-core-dependencies.version}</version> -->
+<!--         <type>pom</type> -->
+<!--         <scope>import</scope> -->
+<!--       </dependency> -->
+
+<!--     </dependencies> -->
+<!--   </dependencyManagement> -->
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-config-server</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-config-monitor</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>net.logstash.logback</groupId>
+      <artifactId>logstash-logback-encoder</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+<!--     <dependency> -->
+<!--     	<groupId>org.springframework.boot</groupId> -->
+<!--     	<artifactId>spring-boot-configuration-processor</artifactId> -->
+<!--     	<optional>true</optional> -->
+<!--     </dependency> -->
+  </dependencies>
+
+  <build>
+    <plugins>
+     <!-- <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+      </plugin> -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <configuration>
+          <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:59:16 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912345558
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912356298
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact com.google.guava\:guava\:jar\:19.0 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/com/google/guava/guava/19.0/guava-19.0.jar. Error code 409, 

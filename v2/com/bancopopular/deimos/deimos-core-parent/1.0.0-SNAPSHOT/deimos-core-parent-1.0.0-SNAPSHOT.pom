@@ -1,0 +1,430 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.bancopopular.deimos</groupId>
+    <artifactId>deimos-framework</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>deimos-core-parent</artifactId>
+  <packaging>pom</packaging>
+
+  <name>deimos-core-parent</name>
+  <description>Proyecto padre que provee configuracion de plugins y agrupa los proyectos
+    deimos-core*
+  </description>
+
+  <inceptionYear>2019</inceptionYear>
+
+  <organization>
+    <name>Everis</name>
+    <url>https://www.terpel.com/</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>oalvaro</id>
+      <name>Oscar Alvaro Aguilar</name>
+      <email>oalvaroa@everis.com</email>
+      <organization>Everis Peru</organization>
+      <organizationUrl>http://www.everis.com/</organizationUrl>
+      <timezone>America/Lima</timezone>
+      <roles>
+        <role>Arquitecto de Microservicios</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.bancopopular.deimos</groupId>
+        <artifactId>deimos-core-dependencies</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.testresult.directory>${project.build.directory}/test-results
+    </project.testresult.directory>
+
+    <java.version>1.8</java.version>
+    <maven.version>3.0.0</maven.version>
+    <mapstruct.version>1.1.0.Final</mapstruct.version>
+    <lombok.version>1.18.8</lombok.version>
+
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+
+    <!-- Plugin Versions -->
+    <maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version>
+    <maven-jar-plugin.version>3.1.2</maven-jar-plugin.version>
+    <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+    <maven-failsafe-plugin.version>2.15</maven-failsafe-plugin.version>
+    <maven-surefire-plugin.version>2.15</maven-surefire-plugin.version>
+    <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+    <maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
+    <maven-enforcer-plugin.version>3.0.0-M2</maven-enforcer-plugin.version>
+    <maven-pmd-plugin.version>3.8</maven-pmd-plugin.version>
+    <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+    <!-- <artifactory-maven-plugin.version>2.6.1</artifactory-maven-plugin.version> -->
+    <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
+    <findbugs-maven-plugin.version>3.0.4</findbugs-maven-plugin.version>
+    <findsecbugs-plugin.version>1.5.0</findsecbugs-plugin.version>
+    <jacoco.it.execution.data.file>${project.testresult.directory}/coverage/jacoco/jacoco-it.exec
+    </jacoco.it.execution.data.file>
+    <jacoco.ut.execution.data.file>${project.testresult.directory}/coverage/jacoco/jacoco-ut.exec
+    </jacoco.ut.execution.data.file>
+    <skip.integration.tests>false</skip.integration.tests>
+    <skip.unit.tests>false</skip.unit.tests>
+    
+  </properties>
+
+  <build>
+    <plugins>
+      <!-- Jar -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>${maven-jar-plugin.version}</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+            <manifestEntries>
+              <Deimos-Framework-Version>${project.version}</Deimos-Framework-Version>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <!-- Release -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${maven-release-plugin.version}</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
+      <!-- Eclipse -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>${maven-eclipse-plugin.version}</version>
+        <configuration>
+          <downloadSources>true</downloadSources>
+          <downloadJavadocs>false</downloadJavadocs>
+        </configuration>
+      </plugin>
+
+      <!-- Compiler -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <inherited>true</inherited>
+        <configuration>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct-processor</artifactId>
+              <version>${mapstruct.version}</version>
+            </path>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+
+      <!-- Sources -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>${maven-source-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Artifactory -->
+      <plugin>
+        <groupId>org.jfrog.buildinfo</groupId>
+        <artifactId>artifactory-maven-plugin</artifactId>
+        <version>${artifactory-maven-plugin.version}</version>
+        <inherited>true</inherited>
+        <executions>
+          <execution>
+            <id>build-info</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>publish</goal>
+            </goals>
+            <configuration>
+              <deployProperties>
+                <gradle>awesome</gradle>
+              </deployProperties>
+              <artifactory>
+                <includeEnvVars>true</includeEnvVars>
+              </artifactory>
+              <publisher>
+                <contextUrl>${ARTIFACT_SERVER_URL}</contextUrl>
+                <username>${ARTIFACT_USER_NAME}</username>
+                <password>${ARTIFACT_USER_PASSWORD}</password>
+                <repoKey>${REPOKEY}</repoKey>
+                <snapshotRepoKey>${REPOKEY}</snapshotRepoKey>
+              </publisher>
+              <buildInfo>
+                <buildNumber>${BUILD_UNIQUE_ID}</buildNumber>
+                <buildUrl>${BUILD_URL}</buildUrl>
+                <buildName>${BUILD_NAME}</buildName>
+              </buildInfo>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <!-- Release -->
+        <plugin>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>${maven-release-plugin.version}</version>
+          <configuration>
+            <autoVersionSubmodules>true</autoVersionSubmodules>
+          </configuration>
+        </plugin>
+
+        <!-- Spring Boot -->
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${spring-boot-maven-plugin.version}</version>
+        </plugin>
+
+        <!-- Enforcer -->
+        <plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${maven-enforcer-plugin.version}</version>
+          <inherited>true</inherited>
+          <executions>
+            <execution>
+              <id>enforce-versions</id>
+              <phase>validate</phase>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                    <message>You are running an older version of Maven.
+                      Deimos
+                      requires at least Maven ${maven.version}
+                    </message>
+                    <version>[${maven.version},)</version>
+                  </requireMavenVersion>
+                  <requireJavaVersion>
+                    <message>You are running an older version of Java.
+                      Deimos
+                      requires at least JDK ${java.version}
+                    </message>
+                    <version>[${java.version},)</version>
+                  </requireJavaVersion>
+                  <requireFilesExist>
+                    <files>
+                      <file>${project.basedir}/checkstyle.xml</file>
+                      <file>${project.basedir}/findbugs-include.xml</file>
+                      <file>${project.basedir}/findbugs-exclude.xml</file>
+                      <file>${project.basedir}/README.md</file>
+                    </files>
+                  </requireFilesExist>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!-- Checkstyle -->
+        <plugin>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>${maven-checkstyle-plugin.version}</version>
+          <inherited>true</inherited>
+          <executions>
+            <execution>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <configuration>
+                <configLocation>${project.basedir}/checkstyle.xml</configLocation>
+                <encoding>${project.build.sourceEncoding}</encoding>
+                <logViolationsToConsole>true</logViolationsToConsole>
+                <failsOnError>true</failsOnError>
+                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                <violationSeverity>warning</violationSeverity>
+                <skip>${maven.test.skip}</skip>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!-- Findbugs -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>findbugs-maven-plugin</artifactId>
+          <version>${findbugs-maven-plugin.version}</version>
+          <inherited>true</inherited>
+          <executions>
+            <execution>
+              <phase>verify</phase>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <configuration>
+                <effort>Max</effort>
+                <threshold>Low</threshold>
+                <xmlOutput>true</xmlOutput>
+                <failOnError>true</failOnError>
+                <includeFilterFile>${project.basedir}/findbugs-include.xml</includeFilterFile>
+                <excludeFilterFile>${project.basedir}/findbugs-exclude.xml</excludeFilterFile>
+                <skip>${maven.test.skip}</skip>
+                <plugins>
+                  <plugin>
+                    <groupId>com.h3xstream.findsecbugs</groupId>
+                    <artifactId>findsecbugs-plugin</artifactId>
+                    <version>${findsecbugs-plugin.version}</version>
+                  </plugin>
+                </plugins>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!-- Java Code Coverage (JaCoCo) -->
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${jacoco-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>pre-unit-tests</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+              <configuration>
+                <!-- Sets the path to the file which contains the execution 
+                  data. -->
+                <destFile>${jacoco.ut.execution.data.file}</destFile>
+                <propertyName>surefireArgLine</propertyName>
+              </configuration>
+            </execution>
+            <!-- Ensures that the code coverage report for unit tests is 
+              created after unit tests have been run -->
+            <execution>
+              <id>post-unit-test</id>
+              <phase>test</phase>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <configuration>
+                <dataFile>${jacoco.ut.execution.data.file}</dataFile>
+                <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+              </configuration>
+            </execution>
+            <execution>
+              <id>pre-integration-test</id>
+              <phase>pre-integration-test</phase>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+              <configuration>
+                <!-- Sets the path to the file which contains the execution 
+                  data. -->
+                <destFile>${jacoco.it.execution.data.file}</destFile>
+                <!-- Sets the name of the property containing the settings 
+                  for JaCoCo runtime agent. -->
+                <propertyName>failsafeArgLine</propertyName>
+              </configuration>
+            </execution>
+            <!-- Ensures that the code coverage report for integration tests 
+              after integration tests have been run. -->
+            <execution>
+              <id>post-integration-test</id>
+              <phase>post-integration-test</phase>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <configuration>
+                <!-- Sets the path to the file which contains the execution 
+                  data. -->
+                <dataFile>${jacoco.it.execution.data.file}</dataFile>
+                <!-- Sets the output directory for the code coverage report. -->
+                <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+        <!-- Used for unit tests -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven-surefire-plugin.version}</version>
+          <configuration>
+            <!-- Sets the VM argument line used when unit tests are run. -->
+            <argLine>${surefireArgLine}</argLine>
+            <!-- Skips unit tests if the value of skip.unit.tests property 
+              is true -->
+            <skipTests>${skip.unit.tests}</skipTests>
+            <!-- Excludes integration tests when unit tests are run. -->
+            <excludes>
+              <exclude>**/*IT.java</exclude>
+            </excludes>
+          </configuration>
+        </plugin>
+
+        <!-- Used for integration tests -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <version>${maven-failsafe-plugin.version}</version>
+          <executions>
+            <!-- Ensures that both integration-test and verify goals of the 
+              Failsafe Maven plugin are executed. -->
+            <execution>
+              <goals>
+                <goal>integration-test</goal>
+                <goal>verify</goal>
+              </goals>
+              <configuration>
+                <!-- Sets the VM argument line used when integration tests 
+                  are run. -->
+                <argLine>${failsafeArgLine}</argLine>
+                <!-- Skips integration tests if the value of skip.integration.tests 
+                  property is true -->
+                <skipTests>${skip.integration.tests}</skipTests>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

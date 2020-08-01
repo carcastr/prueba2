@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.bancopopular.servicios</groupId>
+  <artifactId>banco-popular-proyeccion-financiera</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200117153728</lastUpdated>
+  </versioning>
+</metadata>

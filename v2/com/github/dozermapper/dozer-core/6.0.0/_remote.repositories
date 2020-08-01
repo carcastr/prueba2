@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:55:29 COT 2020
+dozer-core-6.0.0.jar>central=
+dozer-core-6.0.0.pom>central=
+dozer-core-6.0.0-sources.jar>central=

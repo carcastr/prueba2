@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jul 28 11:39:43 COT 2020
+https\://oss.jfrog.org/artifactory/libs-release/.error=
+https\://oss.jfrog.org/artifactory/libs-snapshot/.lastUpdated=1595954383769
+https\://oss.jfrog.org/artifactory/libs-snapshot/.error=
+https\://oss.jfrog.org/artifactory/libs-release/.lastUpdated=1595954383099

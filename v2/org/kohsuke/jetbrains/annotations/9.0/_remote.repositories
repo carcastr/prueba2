@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:55:38 COT 2020
+annotations-9.0-sources.jar>central=
+annotations-9.0.jar>central=
+annotations-9.0.pom>central=

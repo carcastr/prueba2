@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:58:54 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912334066
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912334296
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact aopalliance\:aopalliance\:pom\:1.0 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/aopalliance/aopalliance/1.0/aopalliance-1.0.pom. Error code 409, 

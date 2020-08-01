@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.bancopopular.deimos</groupId>
+  <artifactId>deimos-core-starter-web</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200207145018</lastUpdated>
+  </versioning>
+</metadata>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.bancopopular.services</groupId>
+  <artifactId>deimos-services-parent</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200207145030</lastUpdated>
+  </versioning>
+</metadata>

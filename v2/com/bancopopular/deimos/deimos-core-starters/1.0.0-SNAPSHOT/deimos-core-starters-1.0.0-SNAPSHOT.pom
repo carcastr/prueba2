@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.bancopopular.deimos</groupId>
+		<artifactId>deimos-core-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../deimos-core-parent</relativePath>
+	</parent>
+
+	<artifactId>deimos-core-starters</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>deimos-core-starter-web</module>
+		<module>deimos-core-starter-logstash-logback</module>
+		<module>deimos-core-starter-ws</module>
+		<module>deimos-core-starter-test</module>
+		<module>deimos-core-starter-publisher-subscriber</module>
+	</modules>
+
+	<!-- <build> -->
+	<!-- <plugins> -->
+	<!-- <plugin> -->
+	<!-- <artifactId>maven-deploy-plugin</artifactId> -->
+	<!-- <configuration> -->
+	<!-- <skip>true</skip> -->
+	<!-- </configuration> -->
+	<!-- </plugin> -->
+	<!-- </plugins> -->
+	<!-- </build> -->
+
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>central</id>
+			<name>libs-release</name>
+			<url>https://oss.jfrog.org/artifactory/libs-release</url>
+		</repository>
+		<repository>
+			<snapshots />
+			<id>snapshots</id>
+			<name>libs-snapshot</name>
+			<url>https://oss.jfrog.org/artifactory/libs-snapshot</url>
+		</repository>
+	</repositories>
+
+</project>

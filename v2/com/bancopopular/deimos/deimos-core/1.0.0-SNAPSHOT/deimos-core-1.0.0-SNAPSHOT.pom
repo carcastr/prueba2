@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.bancopopular.deimos</groupId>
+    <artifactId>deimos-core-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../deimos-core-parent</relativePath>
+  </parent>
+
+  <artifactId>deimos-core</artifactId>
+  <name>deimos-core</name>
+
+  <inceptionYear>2019</inceptionYear>
+
+  <organization>
+    <name>Everis</name>
+    <url>https://www.terpel.com/</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>oalvaro</id>
+      <name>Oscar Alvaro Aguilar</name>
+      <email>oalvaroa@everis.com</email>
+      <organization>Everis Peru</organization>
+      <organizationUrl>http://www.everis.com/</organizationUrl>
+      <timezone>America/Lima</timezone>
+      <roles>
+        <role>Arquitecto de Microservicios</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Other Libraries -->
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.github.dozermapper</groupId>
+      <artifactId>dozer-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.beanio</groupId>
+      <artifactId>beanio</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-circuitbreaker</artifactId>
+    </dependency>
+
+    <!-- Manifests -->
+    <dependency>
+      <groupId>com.jcabi</groupId>
+      <artifactId>jcabi-manifests</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+      </plugin>
+      <!--<plugin> -->
+      <!--<artifactId>maven-enforcer-plugin</artifactId> -->
+      <!--</plugin> -->
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+<!--       <plugin> -->
+<!--         <artifactId>maven-checkstyle-plugin</artifactId> -->
+<!--       </plugin> -->
+<!--       <plugin> -->
+<!--         <groupId>org.codehaus.mojo</groupId> -->
+<!--         <artifactId>findbugs-maven-plugin</artifactId> -->
+<!--         <configuration> -->
+<!--           <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile> -->
+<!--         </configuration> -->
+<!--       </plugin> -->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+
+  
+      <repositories>
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>libs-release</name>
+          <url>https://oss.jfrog.org/artifactory/libs-release</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>libs-snapshot</name>
+          <url>https://oss.jfrog.org/artifactory/libs-snapshot</url>
+        </repository>
+      </repositories>
+</project>

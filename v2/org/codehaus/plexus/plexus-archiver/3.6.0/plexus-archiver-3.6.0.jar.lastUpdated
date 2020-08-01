@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:59:15 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912345494
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912355785
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.codehaus.plexus\:plexus-archiver\:jar\:3.6.0 from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/codehaus/plexus/plexus-archiver/3.6.0/plexus-archiver-3.6.0.jar. Error code 409, 

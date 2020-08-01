@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jun 08 15:53:15 COT 2020
+rxjava-2.2.8.jar>central=
+rxjava-2.2.8-sources.jar>central=
+rxjava-2.2.8.pom>central=

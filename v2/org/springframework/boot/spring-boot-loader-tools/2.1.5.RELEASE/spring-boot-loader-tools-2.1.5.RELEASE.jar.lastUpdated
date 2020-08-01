@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:59:14 COT 2020
+@default-deimos-artifactory-plugins-http\://oss.jfrog.org/artifactory/oss-snapshot-local/.lastUpdated=1595912345337
+https\://repo.maven.apache.org/maven2/.lastUpdated=1595912354799
+http\://oss.jfrog.org/artifactory/oss-snapshot-local/.error=Could not transfer artifact org.springframework.boot\:spring-boot-loader-tools\:jar\:2.1.5.RELEASE from/to deimos-artifactory-plugins (http\://oss.jfrog.org/artifactory/oss-snapshot-local)\: Failed to transfer http\://oss.jfrog.org/artifactory/oss-snapshot-local/org/springframework/boot/spring-boot-loader-tools/2.1.5.RELEASE/spring-boot-loader-tools-2.1.5.RELEASE.jar. Error code 409, 

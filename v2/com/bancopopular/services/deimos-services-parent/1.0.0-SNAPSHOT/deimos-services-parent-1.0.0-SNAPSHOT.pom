@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.bancopopular.deimos</groupId>
+    <artifactId>deimos-framework</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.bancopopular.services</groupId>
+  <artifactId>deimos-services-parent</artifactId>
+  <packaging>pom</packaging>
+
+  <name>Deimos Services Parent Project</name>
+
+  <inceptionYear>2019</inceptionYear>
+
+  <organization>
+    <name>Everis</name>
+    <url>https://www.terpel.com/</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>oalvaro</id>
+      <name>Oscar Alvaro Aguilar</name>
+      <email>oalvaroa@everis.com</email>
+      <organization>Everis Peru</organization>
+      <organizationUrl>http://www.everis.com/</organizationUrl>
+      <timezone>America/Lima</timezone>
+      <roles>
+        <role>Arquitecto de Microservicios</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <properties>
+    <deimos.version>${project.parent.version}</deimos.version>
+    <java.version>1.8</java.version>
+  </properties>
+
+  <!--<distributionManagement>
+    <repository>
+      <id>deimos-releases</id>
+      <name>deimos-artifactory-releases</name>
+      <url>http://artifactory.everis.com:8081/artifactory/DEIMOS.Release</url>
+    </repository>
+    <snapshotRepository>
+      <id>deimos-snapshots</id>
+      <name>deimos-artifactory-snapshots</name>
+      <url>http://artifactory.everis.com:8081/artifactory/DEIMOS.Snapshot</url>
+    </snapshotRepository>
+  </distributionManagement> -->
+  
+   <pluginRepositories>
+<!--     <pluginRepository> -->
+<!-- 		<id>deimos-plugins</id> -->
+<!-- 		<name>Plugin repository</name> -->
+<!-- 		<url>https://repo.spring.io/plugins-release</url> -->
+<!-- 	</pluginRepository> -->
+		<pluginRepository>
+			<id>deimos-artifactory-plugins</id>
+			<name>Plugin repository</name>
+			<url>http://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+		</pluginRepository>
+   </pluginRepositories>
+  
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.bancopopular.deimos</groupId>
+        <artifactId>deimos-core-dependencies</artifactId>
+        <version>${deimos.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+		<plugin>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-maven-plugin</artifactId>
+		  <version>${spring-boot-maven-plugin.version}</version>
+		  <executions>
+		    <execution>
+		      <goals>
+		        <goal>repackage</goal>
+		      </goals>
+		      <phase>install</phase>
+		    </execution>
+		  </executions>
+		</plugin>
+    </plugins>
+  </build>
+
+</project>

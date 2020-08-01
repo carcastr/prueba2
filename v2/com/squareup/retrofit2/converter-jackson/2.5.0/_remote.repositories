@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jul 27 23:55:40 COT 2020
+converter-jackson-2.5.0-sources.jar>central=
+converter-jackson-2.5.0.jar>central=
+converter-jackson-2.5.0.pom>central=

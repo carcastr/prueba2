@@ -1,0 +1,172 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.bancopopular.deimos</groupId>
+    <artifactId>deimos-core-starters</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../</relativePath>
+  </parent>
+
+  <artifactId>deimos-core-starter-test</artifactId>
+
+  <name>deimos-core-starter-test</name>
+  <description>>deimos-core-starter-test</description>
+
+  <inceptionYear>2019</inceptionYear>
+
+  <organization>
+    <name>Everis</name>
+    <url>https://www.terpel.com/</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>oalvaro</id>
+      <name>Oscar Alvaro Aguilar</name>
+      <email>oalvaroa@everis.com</email>
+      <organization>Everis Peru</organization>
+      <organizationUrl>http://www.everis.com/</organizationUrl>
+      <timezone>America/Lima</timezone>
+      <roles>
+        <role>Arquitecto de Microservicios</role>
+      </roles>
+    </developer>
+  </developers>
+
+
+  <dependencies>
+    <!-- Tests -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.ws</groupId>
+      <artifactId>spring-ws-test</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>uk.co.jemos.podam</groupId>
+      <artifactId>podam</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-core</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-junit</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-spring</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-rest-assured</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.serenity-bdd</groupId>
+      <artifactId>serenity-cucumber</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>info.cukes</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.jayway.jsonpath</groupId>
+      <artifactId>json-path-assert</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.easymock</groupId>
+      <artifactId>easymock</artifactId>
+      <scope>compile</scope>
+    </dependency>
+<!--     <dependency> -->
+<!--       <groupId>com.epages</groupId> -->
+<!--       <artifactId>wiremock-spring-boot-starter</artifactId> -->
+<!--       <scope>compile</scope> -->
+<!--     </dependency> -->
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-test</artifactId>
+      <scope>compile</scope>
+    </dependency>
+	<dependency>
+	  <groupId>com.squareup.retrofit2</groupId>
+	  <artifactId>retrofit-mock</artifactId>
+	  <scope>compile</scope>
+	</dependency>
+	<dependency>
+	  <groupId>io.github.resilience4j</groupId>
+	  <artifactId>resilience4j-test</artifactId>
+	  <scope>compile</scope>
+	</dependency>
+    <dependency>
+      <groupId>javax.el</groupId>
+      <artifactId>javax.el-api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+<!--     <dependency> -->
+<!--       <groupId>org.cassandraunit</groupId> -->
+<!--       <artifactId>cassandra-unit-spring</artifactId> -->
+<!--       <exclusions> -->
+<!--         <exclusion> -->
+<!--           <groupId>org.slf4j</groupId> -->
+<!--           <artifactId>slf4j-log4j12</artifactId> -->
+<!--         </exclusion> -->
+<!--         <exclusion> -->
+<!--           <groupId>org.slf4j</groupId> -->
+<!--           <artifactId>jcl-over-slf4j</artifactId> -->
+<!--         </exclusion> -->
+<!--         <exclusion> -->
+<!--           <groupId>log4j</groupId> -->
+<!--           <artifactId>log4j</artifactId> -->
+<!--         </exclusion> -->
+<!--       </exclusions> -->
+<!--       <scope>compile</scope> -->
+<!--     </dependency> -->
+    <dependency>
+      <groupId>org.powermock</groupId>
+      <artifactId>powermock-module-junit4</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.powermock</groupId>
+      <artifactId>powermock-api-mockito2</artifactId>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
